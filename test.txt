@@ -1,1 +1,3 @@
-test
+git add 'test.txt'
+git commit -m "±¸×¢"
+git push origin master  
