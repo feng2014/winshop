@@ -1,11 +1,13 @@
 package main
 
 import (
-	_ "winshop/routers"
 	"github.com/astaxie/beego"
+	"winshop/models"
+	_ "winshop/routers"
 )
 
 func main() {
+
+	models.Init()
 	beego.Run()
 }
-
