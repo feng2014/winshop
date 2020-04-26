@@ -21,6 +21,7 @@ type Products struct {
 	Is_new     uint8
 	Sales      uint8
 	Comments   uint8
+	Goods_desc string
 }
 
 func (a *Products) TableName() string {
@@ -56,4 +57,13 @@ func ProductsGetList(page, pageSize int, orderby int, filters ...interface{}) ([
 	}
 
 	return list, total
+}
+
+func Show(id int) (*Products, error) {
+	r := new(Products)
+	err := orm.NewOrm().QueryTable(TableName("goods")).Filter("id", id).One(r)
+	if err != nil {
+		return nil, err
+	}
+	return r, nil
 }
