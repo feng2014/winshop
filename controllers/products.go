@@ -7,7 +7,6 @@
 package controllers
 
 import (
-	"fmt"
 	"github.com/astaxie/beego"
 	"winshop/models"
 )
@@ -53,7 +52,8 @@ func (c *ProductsController) Get() {
 		row["id"] = v.Id
 		row["goods_name"] = v.Goods_name
 		row["goods_img"] = v.Goods_img
-		row["Shop_price"] = v.Shop_price
+		row["shop_price"] = v.Shop_price
+
 		if k%2 == 0 {
 			row["index"] = 1
 		} else {
@@ -79,10 +79,27 @@ func (c *ProductsController) Get() {
 
 func (c *ShowController) Get() {
 
-	id, cerr_ := c.GetInt("id")
-	fmt.Print(id)
-	if cerr_ == nil {
-		print("ok")
+	id, _ := c.GetInt("id")
+	p, _ := models.Show(id)
+	row := make(map[string]interface{})
+	if p != nil {
+		row["id"] = p.Id
+		row["goods_name"] = p.Goods_name
+		row["shop_price"] = p.Shop_price
+		row["goods_desc"] = p.Goods_desc
 	}
-	//c.Render()
+	//读取相册开始
+	result := models.GalleryGetList(id)
+	classList := make([]map[string]interface{}, len(result))
+	for k, v := range result {
+		row := make(map[string]interface{})
+		row["Id"] = v.Id
+		row["Img_url"] = v.Img_url
+		classList[k] = row
+	}
+	c.Data["photoList"] = classList
+	//读取相册结束
+	c.Data["data"] = row
+	c.TplName = "products/show.tpl"
+	c.Render()
 }
