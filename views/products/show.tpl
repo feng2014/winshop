@@ -57,11 +57,14 @@
     </style> </head> <body> <div class="wrap"> <div class="topTitle"> <span id="topBack" class="topBack"></span> <span class="curTitle">商品详情</span> </div> <!-- 内容部分 --> 
     
     <div class="others-content"> <div class="slider"> <div class="swiper-container" id="swiper-container"> <div class="swiper-wrapper"> 
-    
+        {{range $ind, $elem := .photoList}}
     
     <div class="swiper-slide">
-     <img class="lazyLoad" data-src="http://i.vanclimg.com/640/q80/product/6/3/8/6388723/big/6388723-1j202004231628312411.jpg" src="http://i.vanclimg.com/640/q80/product/6/3/8/6388723/big/6388723-1j202004231628312411.jpg"> </div>
-
+  
+     <img class="lazyLoad" data-src="{{$elem.Img_url}}" src="{{$elem.Img_url}}"> 
+     
+     </div>
+     {{end}}   
       
 
       

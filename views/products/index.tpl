@@ -16,7 +16,7 @@
         /*底部导航栏*/ 
         .nav{position: fixed; bottom: 0; max-width: 640px; width: 100%; height: 4.25rem; border-top: 1px solid #999; overflow: hidden; background-color: #fff; z-index: 999} 
         .nav a {position: relative; width: 20%; height: 100%; float: left; color: #999; text-align: center; } 
-        .nav a span{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); width: 3rem; height: 4rem; background-image: url(https://mi5.vanclimg.com/Content/H5/img/navBgimgNew.png); background-repeat: no-repeat; background-size: 3rem 40rem; overflow: hidden; } 
+        .nav a span{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); width: 3rem; height: 4rem; background-image: url(/static/img/navBgimgNew.png); background-repeat: no-repeat; background-size: 3rem 40rem; overflow: hidden; } 
         .nav .goods-num,.nav .goods-num-active{font-size: 0.8rem; position: absolute; top: 0.1rem; right: 1.6rem; padding: 0 0.2rem; height: 1rem; display: inline-block; line-height: 1.1rem; color: #fff; border-radius: 1.1rem; background: none; background-color: #b81c22; cursor: default; text-align: center; } 
         .nav .nav-home{background-position: 0rem 0rem; } 
         .nav .nav-home-active {background-position: 0rem -20rem; } 
@@ -33,7 +33,7 @@
         .idxSrh-linear-gradient{background: linear-gradient(rgba(209, 207, 207, 1), rgba(209, 207, 207,0.2));background: -webkit-linear-gradient(rgba(209, 207, 207, 1), rgba(209, 207, 207,0.2));background: -moz-linear-gradient(rgba(209, 207, 207, 1), rgba(209, 207, 207,0.2));}
         .search-head{width:3rem;background:url('') no-repeat center/100% auto;margin-right: 1rem;}
         .search-form{height: 2.2rem; line-height: 2.9rem; background-color: #fff; border: 1px solid #aaaaaa; border-radius: 3rem; overflow: hidden; flex: 1; margin-right: 1.5rem; position: relative; } 
-        .index-search .search-icon{position: absolute; left:0; top:50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); display: inline-block; margin-left: 0.8rem; width: 1.5rem; height: 1.5rem; border:0;background: url(http://i10.m.vancl.com/Content/H5/img/search2.png) no-repeat; background-size: contain; cursor: pointer; } 
+        .index-search .search-icon{position: absolute; left:0; top:50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); display: inline-block; margin-left: 0.8rem; width: 1.5rem; height: 1.5rem; border:0;background: url(/static/img/search2.png) no-repeat; background-size: contain; cursor: pointer; } 
         .index-search .search-input{font-size: inherit; position: absolute; left:3.3rem; top:50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); width: 85%; height: 85%; display: inline-block; border: 0 none; vertical-align:middle;} 
         .index-message{ background: url() no-repeat center/100% auto; position:relative; width: 1.8rem; text-align: center; color: white; } 
         .index-message .hasNewMsg{position: absolute; top: 0.1rem; right: 0.1rem; border: 0.2rem solid; border-radius: 0.2rem; display: none;} 
