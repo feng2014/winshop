@@ -103,14 +103,15 @@
              <dt class="left">
              
              <a class="pic lh0" href="/products/show?id={{$elem.id}}"> <img  src="{{$elem.goods_img}}" > </a><a class="text" href="/products/show?id={{$elem.id}}">{{$elem.goods_name}}</a> <h3 class="price">
-                ￥{{$elem.Shop_price}}元</h3>
+                ￥{{$elem.shop_price}}元</h3>
 
                 </dt>
             {{else}}
                  <dt class="right"><a class="pic lh0" href="/products/show?id={{$elem.id}}"> <img  src="{{$elem.goods_img}}" > </a><a class="text" href="/products/show?id={{$elem.id}}">{{$elem.goods_name}}</a> <h3 class="price">
-               ￥{{$elem.Shop_price}}元</h3> </dt> 
+               ￥{{$elem.shop_price}}元</h3> </dt> 
           
                    {{end}}
+                   
                     {{end}}    
                 </dl>
       
